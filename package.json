@@ -1,0 +1,36 @@
+{
+  "name": "postcss-prefix-custom-properties",
+  "version": "0.1.0",
+  "description": "Prefix CSS custom properties (CSS variables) with PostCSS.",
+  "main": "src/index.js",
+  "type": "commonjs",
+  "exports": {
+    ".": "./src/index.js"
+  },
+  "files": [
+    "src"
+  ],
+  "scripts": {
+    "lint": "eslint .",
+    "example": "postcss example/input.css --config example/postcss.config.cjs --output example/dist/output.css"
+  },
+  "keywords": [
+    "postcss",
+    "postcss-plugin",
+    "css",
+    "prefix",
+    "custom-properties"
+  ],
+  "author": "",
+  "license": "MIT",
+  "dependencies": {
+    "postcss": "^8.4.31",
+    "postcss-value-parser": "^4.2.0"
+  },
+  "peerDependencies": {
+    "postcss": "^8.0.0"
+  },
+  "devDependencies": {
+    "postcss-cli": "^11.0.0"
+  }
+}

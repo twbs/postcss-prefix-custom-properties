@@ -1,0 +1,18 @@
+:root {
+  --brand-color: #ff4757;
+  --ignored: 42px;
+}
+
+@supports (background: paint(squircle)) {
+  @property --squircle-radius {
+    syntax: '<length>';
+    inherits: false;
+    initial-value: 16px;
+  }
+}
+
+.button {
+  color: var(--brand-color);
+  border-radius: var(--squircle-radius, 8px);
+  padding: var(--ignored);
+}
