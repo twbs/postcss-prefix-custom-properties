@@ -5,7 +5,7 @@
 ## Installation
 
 ```bash
-npm install postcss-prefix-custom-properties
+npm i --d postcss-prefix-custom-properties
 ```
 
 ## Usage
@@ -46,5 +46,5 @@ npm install
 npm run example
 ```
 
-The generated CSS demonstrates the plugin's behaviour when applying a `bs-` prefix and ignoring
+The generated CSS demonstrates the plugin's behavior when applying a `bs-` prefix and ignoring
 variables that match either the string `--ignored` or the regex `/squircle/`.

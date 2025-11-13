@@ -20,15 +20,15 @@
     "css",
     "prefix",
     "custom-properties"
+    "css-variables"
   ],
-  "author": "",
+  "author": "Mark Otto",
   "license": "MIT",
   "dependencies": {
-    "postcss": "^8.4.31",
     "postcss-value-parser": "^4.2.0"
   },
   "peerDependencies": {
-    "postcss": "^8.0.0"
+    "postcss": "^8.4.0"
   },
   "devDependencies": {
     "postcss-cli": "^11.0.0"
