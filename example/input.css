@@ -1,6 +1,10 @@
 :root {
   --brand-color: #ff4757;
+  --fg: #333;
+  --bg: #ccc;
   --ignored: 42px;
+
+  color: light-dark(var(--fg), var(--bg));
 }
 
 @supports (background: paint(squircle)) {

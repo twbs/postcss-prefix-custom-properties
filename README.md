@@ -8,6 +8,52 @@
 npm i --d postcss-prefix-custom-properties
 ```
 
+## Example
+
+```css
+/* Input (ignoring `--ignored` and `squircle`) */
+:root {
+  --brand-color: #ff4757;
+  --fg: #333;
+  --bg: #ccc;
+  --ignored: 42px;
+
+  color: light-dark(var(--fg), var(--bg));
+}
+
+.button {
+  color: var(--brand-color);
+  border-radius: var(--squircle-radius, 8px);
+  padding: var(--ignored);
+}
+```
+
+```css
+/* Output */
+:root {
+  --bs-brand-color: #ff4757;
+  --bs-fg: #333;
+  --bs-bg: #ccc;
+  --ignored: 42px;
+
+  color: light-dark(var(--bs-fg), var(--bs-bg));
+}
+
+@supports (background: paint(squircle)) {
+  @property --squircle-radius {
+    syntax: '<length>';
+    inherits: false;
+    initial-value: 16px;
+  }
+}
+
+.button {
+  color: var(--bs-brand-color);
+  border-radius: var(--squircle-radius, 8px);
+  padding: var(--ignored);
+}
+```
+
 ## Usage
 
 Add the plugin to your PostCSS configuration:

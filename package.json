@@ -19,7 +19,7 @@
     "postcss-plugin",
     "css",
     "prefix",
-    "custom-properties"
+    "custom-properties",
     "css-variables"
   ],
   "author": "Mark Otto",
