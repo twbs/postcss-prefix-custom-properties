@@ -3,9 +3,13 @@
   "version": "0.1.0",
   "description": "Prefix CSS custom properties (CSS variables) with PostCSS.",
   "main": "src/index.js",
+  "types": "src/index.d.ts",
   "type": "commonjs",
   "exports": {
-    ".": "./src/index.js"
+    ".": {
+      "require": "./src/index.js",
+      "types": "./src/index.d.ts"
+    }
   },
   "files": [
     "src"
