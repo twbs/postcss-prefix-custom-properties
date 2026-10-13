@@ -50,6 +50,13 @@ module.exports = (options = {}) => {
   return {
     postcssPlugin: pluginName,
     Once(root) {
+      const ignoreCommentNode = root.nodes.find(node => {
+        return node.type === 'comment' && node.text.trim() ===  'postcss-prefix-custom-properties-ignore';
+      });
+      if (ignoreCommentNode) {
+        return;
+      }
+
       root.walkDecls((decl) => {
         if (decl.prop && decl.prop.startsWith('--') && !matchesIgnore(decl.prop, ignore)) {
           decl.prop = prefixCustomPropertyName(decl.prop, prefix);

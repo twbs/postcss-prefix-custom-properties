@@ -1,0 +1,23 @@
+/* postcss-prefix-custom-properties-ignore */
+:root {
+  --brand-color: #ff4757;
+  --fg: #333;
+  --bg: #ccc;
+  --ignored: 42px;
+
+  color: light-dark(var(--fg), var(--bg));
+}
+
+@supports (background: paint(squircle)) {
+  @property --squircle-radius {
+    syntax: '<length>';
+    inherits: false;
+    initial-value: 16px;
+  }
+}
+
+.button {
+  color: var(--brand-color);
+  border-radius: var(--squircle-radius, 8px);
+  padding: var(--ignored);
+}
